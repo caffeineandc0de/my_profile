@@ -110,32 +110,32 @@ export const info = {
 // You can also remove the emojis if you'd like, I just think they look cute :P
     ],
     portfolio: [ // This is where your portfolio projects will be detailed
+        // {
+        //     title: "Project 1",
+        //     live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
+        //     source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
+        //     image: mock1
+        // },
         {
-            title: "Project 1",
-            live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
-            source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
-            image: mock1
-        },
-        {
-            title: "Project 2",
+            title: "Alarm Clock",
             live: "https://paytonpierce.dev",
             source: "https://github.com/paytonjewell",
             image: mock2
         },
         {
-            title: "Project 3",
+            title: "To-Do List",
             live: "https://paytonpierce.dev",
             source: "https://github.com/paytonjewell",
             image: mock3
         },
         {
-            title: "Project 4",
+            title: "Project 3",
             live: "https://paytonpierce.dev",
             source: "https://github.com/paytonjewell",
             image: mock4
         },
         {
-            title: "Project 5",
+            title: "Project 4",
             live: "https://paytonpierce.dev",
             source: "https://github.com/paytonjewell",
             image: mock5

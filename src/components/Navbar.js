@@ -24,6 +24,11 @@ const links = [
         to: 'blog',
         active: 'blog'
     },
+    {
+        name: 'portfolio',
+        to: 'portfolio',
+        active: 'portfolio'
+    },
 ]
 
 // This function is used to create a scroll offset to compensate for the navbar
