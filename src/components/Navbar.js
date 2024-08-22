@@ -8,11 +8,6 @@ import { info } from "../info/Info";
 import { singlePage } from '../info/Info';
 
 const links = [
-    // {
-    //     name: 'Home',
-    //     to: '',
-    //     active: 'home'
-    // },
     {
         name: 'About',
         to: 'about',
