@@ -9,21 +9,20 @@ import { singlePage } from '../info/Info';
 
 const links = [
     {
+        name: 'Home',
+        type: 'initials',
+        to: '',
+        active: 'home'
+    },
+    {
         name: 'About',
         to: 'about',
         active: 'about'
     },
     {
-        name: 'Blog',
-        type: 'blog',
-        to: '',
+        name: 'blog',
+        to: 'blog',
         active: 'blog'
-    },
-    {
-        name: info.initials,
-        type: 'initials',
-        to: '',
-        active: 'home'
     },
 ]
 
@@ -50,8 +49,8 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
                         scroll={el => scrollWidthOffset(el)}
                             smooth
                             onClick={() => setActive(link.active)} className={Style.link}>
-                            {!link.type && <p style={{ padding: '0.5rem 0' }}>{link.name}</p>}
-                            {link.type && <h1>{link.name}</h1>}
+                            {!link.type && <p style={{ padding: '0.5rem 0',textTransform:"capitalize" }}>{link.name}</p>}
+                            {link.type && <h1 style={{textTransform:"capitalize" }}>{link.name}</h1>}
                         </Link>
                     </Box>
                 ))}
