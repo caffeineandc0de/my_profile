@@ -1,52 +1,69 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../Assets/Santos.pdf"; // Ensure this path is correct
+import pdf from "../Assets/Santos.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
+import { pdfjs } from "react-pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
+// Set the worker source
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(window.innerWidth);
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pages, setPages] = useState([]);
+  const canvasContainerRef = useRef(null);
 
   useEffect(() => {
-    // Update width on window resize
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Callback function for when the PDF is loaded
-  function onLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+  useEffect(() => {
+    const loadPages = async () => {
+      const loadingTask = pdfjs.getDocument(pdf);
+      const pdfDocument = await loadingTask.promise;
 
-  // Handle error in PDF loading
-  function onLoadError(error) {
-    console.error("Failed to load PDF:", error);
-  }
+      const pagePromises = [];
+      for (let pageNumber = 1; pageNumber <= pdfDocument.numPages; pageNumber++) {
+        pagePromises.push(pdfDocument.getPage(pageNumber));
+      }
+
+      const pages = await Promise.all(pagePromises);
+      setPages(pages);
+    };
+
+    loadPages();
+  }, []);
+
+  useEffect(() => {
+    if (pages.length > 0) {
+      const container = canvasContainerRef.current;
+      container.innerHTML = ''; // Clear previous canvases
+
+      pages.forEach((page, index) => {
+        const viewport = page.getViewport({ scale: width > 786 ? 1.7 : 0.6 });
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        container.appendChild(canvas);
+
+        page.render({
+          canvasContext: context,
+          viewport: viewport,
+        });
+      });
+    }
+  }, [pages, width]);
 
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
         <Row className="resume">
-          <Document
-            file={pdf}
-            onLoadSuccess={onLoadSuccess}
-            onLoadError={onLoadError}
-            className="d-flex justify-content-center"
-          >
-            <Page pageNumber={pageNumber} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+          <div className="pdf-container" ref={canvasContainerRef}></div>
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
@@ -61,6 +78,14 @@ function ResumeNew() {
           </Button>
         </Row>
       </Container>
+      <style jsx>{`
+        .pdf-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      `}</style>
     </div>
   );
 }
