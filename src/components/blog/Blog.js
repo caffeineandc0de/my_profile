@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 export default function Blog({ innerRef }) {
     return (
