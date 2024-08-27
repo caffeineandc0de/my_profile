@@ -3,14 +3,12 @@ import { Box, Grid, Typography } from "@mui/material";
 
 export default function Blog({ innerRef }) {
     return (
-        <Box id={'blog'} ref={innerRef} style={{padding:'15rem'}}>
-            <Grid container display={'flex'} justifyContent={'center'}>
-                <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-                    <Typography>
-                        Coming Soon!
-                    </Typography>
-                </Box>
-            </Grid>
+
+        <Box ref={innerRef} component={'main'} display={'flex'} flexDirection={{ xs: 'column', md: 'row' }} alignItems={'center'}
+            justifyContent={'center'} minHeight={'calc(100vh - 175px)'} id={'blog'}>
+            <Box>
+                <h1>Coming Soon!</h1>
+            </Box>
         </Box>
     );
 };
