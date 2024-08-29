@@ -4,6 +4,7 @@ import Portfolio from "./portfolio/Portfolio";
 import Blog from "./blog/Blog";
 import React from 'react';
 import { Box } from "@mui/material";
+import Resume from "./resume/Resume.js";
 
 export default function SinglePageRoutes({refs}) {
     return (<Box mt={'3rem'}>
@@ -11,5 +12,6 @@ export default function SinglePageRoutes({refs}) {
         <About innerRef={refs.refAbout}/>
         <Portfolio innerRef={refs.refPortfolio}/>
         <Blog innerRef={refs.refBlog}/>
+        <Resume innerRef={refs.refResume}/>
     </Box>)
 }
