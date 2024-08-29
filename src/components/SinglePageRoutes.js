@@ -4,7 +4,7 @@ import Portfolio from "./portfolio/Portfolio";
 import Blog from "./blog/Blog";
 import React from 'react';
 import { Box } from "@mui/material";
-import Resume from "./resume/Resume";
+import Resume from "./resume/Resume.js";
 
 export default function SinglePageRoutes({refs}) {
     return (<Box mt={'3rem'}>

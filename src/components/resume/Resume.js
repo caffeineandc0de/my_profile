@@ -4,10 +4,10 @@ import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../Assets/Santos.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
-import { pdfjs } from "react-pdf";
+import { pdfjs } from 'react-pdf';
 
-// Set the worker source
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
+
 
 function ResumeNew() {
   const [width, setWidth] = useState(window.innerWidth);

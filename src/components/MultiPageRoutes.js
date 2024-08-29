@@ -4,7 +4,7 @@ import Portfolio from "./portfolio/Portfolio";
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Blog from "./blog/Blog";
-import Resume from "./resume/Resume";
+import Resume from "./resume/Resume.js";
 
 export default function MultiPageRoutes() {
     return (
