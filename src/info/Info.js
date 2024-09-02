@@ -1,8 +1,8 @@
 import self from "../img/self.png"
-import mock2 from "../img/mock2.png"
-import mock3 from "../img/mock3.png"
-import mock4 from "../img/mock4.png"
-import mock5 from "../img/mock5.png"
+import mock2 from "../img/21kschool.png"
+import mock4 from "../img/Instablood.png"
+import mock5 from "../img/Korero.png"
+import mock3 from "../img/Wekare.png"
 
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
 how to make this template work best for you! */
@@ -111,28 +111,24 @@ export const info = {
     portfolio: [ // This is where your portfolio projects will be detailed
      
         {
-            title: "Alarm Clock",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
+            title: "21Kschool",
+            live: "https://b21k-mvp-91002-web.b91002.stage.us-east-1.aws.svc.builder.ai/EmailAccountLoginBlock",
             image: mock2
         },
         {
-            title: "To-Do List",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
+            title: "Wekare",
+            live: "https://clinic.wekare.sg/#/",
             image: mock3
         },
         {
-            title: "Project 3",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock4
+            title: "Korero",
+            live: "https://www.tekorero.com/",
+            image: mock5
         },
         {
-            title: "Project 4",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock5
+            title: "Instablood",
+            live: "https://www.instablood.org/#home",
+            image: mock4
         }
     ]
 }
