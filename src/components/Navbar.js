@@ -5,15 +5,11 @@ import Toggler from "./home/Toggler";
 import { HashLink as Link } from 'react-router-hash-link';
 import { Box } from "@mui/material";
 import { info } from "../info/Info";
+import SD from "../img/SDback.png";
+import SDB from "../img/SDBback.png";
 import { singlePage } from '../info/Info';
 
 const links = [
-    {
-        name: 'Home',
-        type: 'initials',
-        to: '',
-        active: 'home'
-    },
     {
         name: 'About',
         to: 'about',
@@ -23,6 +19,12 @@ const links = [
         name: 'blog',
         to: 'blog',
         active: 'blog'
+    },
+    {
+        name: 'SD',
+        type: 'initials',
+        to: '',
+        active: 'home'
     },
     {
         name: 'portfolio',
@@ -40,15 +42,14 @@ const links = [
 // when you click on the nav buttons to scroll down.
 const scrollWidthOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80; 
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
 }
-
 
 export default function Navbar({ darkMode, handleClick, active, setActive }) {
 
     return (
-        <Box component={'nav'} width={'100%'} position={singlePage ? 'fixed' : 'relative'} className={darkMode? Style.dark : Style.light}>
+        <Box component={'nav'} width={'100%'} position={singlePage ? 'fixed' : 'relative'} className={darkMode ? Style.dark : Style.light}>
             <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
                 gap={{ xs: '2rem', md: '8rem' }}
                 textTransform={'lowercase'} fontSize={'1rem'}>
@@ -56,11 +57,22 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
                     <Box key={index} component={'li'} className={(link.active === active && !link.type) && Style.active}
                         sx={{ borderImageSource: info.gradient }}>
                         <Link to={singlePage ? `#${link.to}` : `/${link.to}`}
-                        scroll={el => scrollWidthOffset(el)}
+                            scroll={el => scrollWidthOffset(el)}
                             smooth
                             onClick={() => setActive(link.active)} className={Style.link}>
-                            {!link.type && <p style={{ padding: '0.5rem 0',textTransform:"capitalize" }}>{link.name}</p>}
-                            {link.type && <h1 style={{textTransform:"capitalize" }}>{link.name}</h1>}
+                            {!link.type ? (
+                                <p style={{ padding: '0.5rem 0', textTransform: "capitalize" }}>{link.name}</p>
+                            ) : (
+                                <h1 style={{ textTransform: "capitalize" }}>
+
+                                    <img src={darkMode ? SD : SDB} alt="logo" style={{
+                                        height: '5rem',
+                                        width: '10rem',
+                                        borderRadius: '50%',
+                                        objectFit: 'cover'
+                                    }} />
+                                </h1>
+                            )}
                         </Link>
                     </Box>
                 ))}
