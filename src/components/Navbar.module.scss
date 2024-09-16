@@ -28,6 +28,13 @@ li {
   }
 }
 
-.link:hover {
-  color: unset;
+.link {
+  color: black; // Set initial link color to black
+
+  &:hover {
+    color: #fb6464; // Change color on hover
+  }
+  &:active, &:focus {
+    color: #fb6464; // Change color when the link is activated or focused
+  }
 }

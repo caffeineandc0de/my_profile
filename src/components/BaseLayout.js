@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Style from './BaseLayout.module.scss'
 import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
+import Grid from '@mui/material/Grid2';
 import MultiPageRoutes from './MultiPageRoutes';
 import { singlePage } from '../info/Info';
 import SinglePageRoutes from './SinglePageRoutes';
@@ -50,7 +51,7 @@ export default function BaseLayout() {
             <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
                   py={'1.5rem'} sx={{ opacity: 0.7 }} width={'100%'}>
-                  <p>template created with &hearts; by <a href={'https://github.com/Santoshd561/my_profile'}>Santos Das</a></p>
+                  <p>template created with &hearts; by <a href={'https://github.com/Santoshd561/my_profile'} style={{color: "#fb6464",fontWeight:"700"}}>Santos Das</a></p>
                   <p>&copy; 2024</p>
                </Box>
             </Grid>

@@ -7,7 +7,7 @@ import mock3 from "../img/Wekare.png"
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
 how to make this template work best for you! */
 
-export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
+export let colors = ["rgba(255,99,98,255)", "rgba(255,99,98,255)"];
 /*
 I highly recommend using a gradient generator like https://gradientgenerator.paytonpierce.dev/ to generate a pair of colors that you like.
 These colors will be used to style your name on the homepage, the background of your picture, and some other accents throughout
@@ -29,26 +29,26 @@ export const info = {
     firstName: "Santos",
     lastName: "Das",
     initials: "SD", // the example uses first and last, but feel free to use three or more if you like.
-    position: "a Full Stack Developer",
+    position: "a Frontend Team Lead",
     selfPortrait: self, // don't change this unless you want to name your self-portrait in the "img" folder something else!
     gradient: `-webkit-linear-gradient(135deg, ${colors})`, // don't change this either
     baseColor: colors[0],
     miniBio: [ // these are just some "tidbits" about yourself. You can look at mine https://paytonjewell.github.io/#/ for an example if you'd like
         {
             emoji: '☕',
-            text: 'fueled by coffee'
+            text: 'Powered by caffeine, driven by code'
         },
         {
-            emoji: '🌎',
-            text: 'based in Bhubaneswar'
+            emoji: '📍',
+            text: 'Coding my way from Bhubaneswar to the world'
         },
         {
-            emoji: "💼",
-            text: "Team Lead at Metafic"
+            emoji: "👨‍💻",
+            text: "Leading frontend teams to success @ Metafic"
         },
         {
-            emoji: "📧",
-            text: "santoshd561@gmail.com"
+            emoji: "📬",
+            text: "Let’s connect: santoshd561@gmail.com"
         }
     ],
     socials: [
