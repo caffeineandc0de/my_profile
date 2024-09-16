@@ -3,6 +3,9 @@ import mock2 from "../img/21kschool.png"
 import mock4 from "../img/Instablood.png"
 import mock5 from "../img/Korero.png"
 import mock3 from "../img/Wekare.png"
+import mock6 from "../img/Oly.png"
+import mock7 from "../img/Remserv.png"
+import mock8 from "../img/Maxxia.png"
 
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
 how to make this template work best for you! */
@@ -77,16 +80,16 @@ export const info = {
             icon: "fa-brands fa-x-twitter",
             label: 'x'
         }
-// Feel free to remove any of these that you don't have. I'll write an FAQ on how to add new ones later, let me know if you have a request for an icon!
-// Just change the links so that they lead to your social profiles.
+        // Feel free to remove any of these that you don't have. I'll write an FAQ on how to add new ones later, let me know if you have a request for an icon!
+        // Just change the links so that they lead to your social profiles.
 
     ],
     bio: "Hello! I'm Santos. I'm team lead at Metafic. I studied MCA at VSSUT,Burla, I enjoy long drive on the bike, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
     skills:
-        {
-            proficientWith: ['javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'figma'],
-            exposedTo: ['nodejs', 'outsystems', 'aws']
-        }
+    {
+        proficientWith: ['javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'figma'],
+        exposedTo: ['nodejs', 'outsystems', 'aws']
+    }
     ,
     hobbies: [
         {
@@ -105,11 +108,25 @@ export const info = {
             label: 'cooking',
             emoji: '🌶'
         }
-// Same as above, change the emojis to match / relate to your hobbies or interests.
-// You can also remove the emojis if you'd like, I just think they look cute :P
+        // Same as above, change the emojis to match / relate to your hobbies or interests.
+        // You can also remove the emojis if you'd like, I just think they look cute :P
     ],
     portfolio: [ // This is where your portfolio projects will be detailed
-     
+        {
+            title: "Oly",
+            live: "https://mcmillanllptrial-dev.outsystemsenterprise.com/OlyWeb/",
+            image: mock6
+        },
+        {
+            title: "Maxxia",
+            live: "https://mcmillanllptrial-dev.outsystemsenterprise.com/MaxxiaOnline/",
+            image: mock8
+        },
+        {
+            title: "Remserv",
+            live: "https://mcmillanllptrial-dev.outsystemsenterprise.com/RemservOnline/",
+            image: mock7
+        },
         {
             title: "21Kschool",
             live: "https://b21k-mvp-91002-web.b91002.stage.us-east-1.aws.svc.builder.ai/EmailAccountLoginBlock",
