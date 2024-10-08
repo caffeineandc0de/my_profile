@@ -38,3 +38,25 @@ li {
     color: #fb6464; // Change color when the link is activated or focused
   }
 }
+
+@media (max-width: 768px) {
+  img {
+      width: 5rem;
+      height: 5rem;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.link {
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+}
+
+.logo {
+  height: 5rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
