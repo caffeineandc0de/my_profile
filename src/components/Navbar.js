@@ -56,21 +56,12 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
                 {links.map((link, index) => (
                     <Box key={index} component={'li'} className={(link.active === active && !link.type) && Style.active}
                         sx={{ borderImageSource: info.gradient }}>
-                        <Link to={singlePage ? `#${link.to}` : `/${link.to}`}
-                            scroll={el => scrollWidthOffset(el)}
-                            smooth
-                            onClick={() => setActive(link.active)} className={Style.link}>
+                        <Link to={singlePage ? `#${link.to}` : `/${link.to}`} scroll={el => scrollWidthOffset(el)} smooth onClick={() => setActive(link.active)} className={`${Style.link}`}>
                             {!link.type ? (
-                                <p style={{ padding: '0.5rem 0', textTransform: "capitalize" }}>{link.name}</p>
+                                <p className={Style.link}>{link.name}</p>
                             ) : (
-                                <h1 style={{ textTransform: "capitalize" }}>
-
-                                    <img src={darkMode ? SD : SDB} alt="logo" style={{
-                                        height: '5rem',
-                                        width: '10rem',
-                                        borderRadius: '50%',
-                                        objectFit: 'cover'
-                                    }} />
+                                <h1 className={Style.link}>
+                                    <img src={darkMode ? SD : SDB} alt="logo" className={Style.logo} />
                                 </h1>
                             )}
                         </Link>
