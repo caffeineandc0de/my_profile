@@ -1,0 +1,59 @@
+.blogImage {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blogCard {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogContent {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+// Blogs.module.scss
+
+// Blogs.module.scss
+
+.blogdetail {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+.card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px; // Add padding inside the card
+}
+
+.codeBlock {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre;
+    margin: 20px 0; // Space above and below the code block
+}
+
+.typographySpacing {
+    margin: 20px 0; // Space between paragraphs and sections
+}
+
+.carousel {
+    margin-top: 20px;
+}
+
+.slick-slide {
+    margin: 0 10px; // Adjust spacing between cards
+}
