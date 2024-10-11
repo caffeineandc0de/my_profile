@@ -128,9 +128,9 @@ export const info = {
             image: mock7
         },
         {
-            title: "21Kschool",
-            live: "https://b21k-mvp-91002-web.b91002.stage.us-east-1.aws.svc.builder.ai/EmailAccountLoginBlock",
-            image: mock2
+            title: "Instablood",
+            live: "https://www.instablood.org/#home",
+            image: mock4
         },
         {
             title: "Wekare",
@@ -142,10 +142,11 @@ export const info = {
             live: "https://www.tekorero.com/",
             image: mock5
         },
+      
         {
-            title: "Instablood",
-            live: "https://www.instablood.org/#home",
-            image: mock4
-        }
+            title: "21Kschool",
+            live: "https://b21k-mvp-91002-web.b91002.stage.us-east-1.aws.svc.builder.ai/EmailAccountLoginBlock",
+            image: mock2
+        },
     ]
 }
