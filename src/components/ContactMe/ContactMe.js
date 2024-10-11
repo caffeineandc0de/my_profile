@@ -22,6 +22,12 @@ const ContactMe = () => {
 
     return (
         <Container className={Style.contactContainer}>
+            {/* Coming Soon Message */}
+            <Box className={Style.comingSoonMessage}>
+                Coming Soon!
+            </Box>
+
+            {/* You can keep the form for future use */}
             <Typography variant="h4" component="h1" className={Style.title}>
                 Contact Me
             </Typography>
@@ -34,6 +40,7 @@ const ContactMe = () => {
                     required
                     fullWidth
                     margin="normal"
+                    disabled
                 />
                 <TextField
                     label="Email"
@@ -43,6 +50,7 @@ const ContactMe = () => {
                     required
                     fullWidth
                     margin="normal"
+                    disabled
                 />
                 <TextField
                     label="Message"
@@ -54,8 +62,9 @@ const ContactMe = () => {
                     multiline
                     rows={4}
                     margin="normal"
+                    disabled
                 />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="primary" disabled>
                     Send Message
                 </Button>
             </form>
