@@ -1,14 +1,14 @@
 @import "../variables.modules";
 
 nav {
-  transition: all 400ms;
+  transition: background-color 400ms, box-shadow 400ms; // Add shadow transition
   z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Optional: add shadow to navbar
 }
 
 .dark {
   background-color: $dark;
 }
-
 
 .light {
   background-color: $white;
@@ -19,12 +19,20 @@ nav {
   border-image-slice: 1;
 }
 
+.navList {
+  display: flex; // Ensure ul is flex
+  justify-content: center; // Center items
+  padding: 0; // Remove default padding
+  margin: 0; // Remove default margin
+  list-style: none; // Remove bullets
+  gap: 2rem; // Add gap between items
+}
+
 li {
-  transition: $transition;
+  transition: transform 200ms; // Define transition for transform
 
   &:hover {
     transform: translateY(-3px);
-    transition: $transition;
   }
 }
 
@@ -33,22 +41,26 @@ li {
 
   &:hover {
     color: #fb6464; // Change color on hover
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); // Optional: add text shadow on hover
   }
+
   &:active, &:focus {
-    color: #fb6464; // Change color when the link is activated or focused
+    color: #fb6464; // Change color when activated or focused
   }
 }
 
 @media (max-width: 768px) {
   img {
-      width: 5rem;
-      height: 5rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 .link {
   padding: 0.5rem 0;
   text-transform: capitalize;
@@ -56,7 +68,18 @@ img {
 
 .logo {
   height: 5rem;
-  width: 10rem;
+  width: auto;
   border-radius: 50%;
   object-fit: cover;
+
+  @media (max-width: 768px) {
+    height: 4rem; // Smaller height for tablet screens
+    width: auto; // Maintain aspect ratio
+  }
+
+  @media (max-width: 480px) {
+    height: 3rem; // Even smaller for mobile screens
+    width: auto; // Maintain aspect ratio
+  }
 }
+
