@@ -66,9 +66,11 @@ const BlogDetail = () => {
                         <div key={index}>
                             <Typography variant="h6">{section.heading}</Typography>
                             <Typography variant="body2">{section.content}</Typography>
+                            {section.example &&
                             <div className={Style.codeBlock}>
                                 <pre>{section.example}</pre>
                             </div>
+                            }
                             <Typography variant="body2" color="text.secondary">
                                 {section.benefits}
                             </Typography>

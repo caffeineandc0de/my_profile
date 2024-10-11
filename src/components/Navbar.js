@@ -11,6 +11,12 @@ import { singlePage } from '../info/Info';
 
 const links = [
     {
+        name: 'SD',
+        type: 'initials',
+        to: '',
+        active: 'home'
+    },
+    {
         name: 'About',
         to: 'about',
         active: 'about'
@@ -20,12 +26,7 @@ const links = [
         to: 'blog',
         active: 'blog'
     },
-    {
-        name: 'SD',
-        type: 'initials',
-        to: '',
-        active: 'home'
-    },
+
     {
         name: 'portfolio',
         to: 'portfolio',
@@ -36,6 +37,11 @@ const links = [
         to: 'resume',
         active: 'resume'
     },
+    {
+        name: 'contact',
+        to: 'contact',
+        active: 'contact'
+    }
 ]
 
 // This function is used to create a scroll offset to compensate for the navbar
@@ -51,7 +57,7 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
     return (
         <Box component={'nav'} width={'100%'} position={singlePage ? 'fixed' : 'relative'} className={darkMode ? Style.dark : Style.light}>
             <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
-                gap={{ xs: '2rem', md: '10rem' }}
+                gap={{ xs: '2rem', md: '8rem' }}
                 textTransform={'lowercase'} fontSize={'1rem'}>
                 {links.map((link, index) => (
                     <Box key={index} component={'li'} className={(link.active === active && !link.type) && Style.active}
