@@ -56,12 +56,12 @@ export const info = {
     ],
     socials: [
         {
-            link: "https://www.facebook.com/santoshdas561/",
+            link: "https://www.facebook.com/caffeineandc0de/",
             icon: 'fa fa-facebook',
             label: 'facebook'
         },
         {
-            link: "https://www.instagram.com/iamsantosdas/",
+            link: "https://www.instagram.com/caffeineandc0de/",
             icon: 'fa fa-instagram',
             label: 'instagram'
         },
@@ -71,15 +71,21 @@ export const info = {
             label: 'github'
         },
         {
-            link: "https://www.linkedin.com/in/santoshdas561",
+            link: "https://www.linkedin.com/in/santosdasdev/",
             icon: "fa fa-linkedin",
             label: 'linkedin'
         },
-        {
-            link: "https://x.com/Santosh07292859",
-            icon: "fa-brands fa-x-twitter",
-            label: 'x'
-        }
+        // {
+        //     link: "https://x.com/caffeineandc0de",
+        //     icon: "fab fa-twitter", // Corrected class for Twitter
+        //     label: 'x'
+        // },
+        // {
+        //     link: "https://www.threads.net/caffeineandc0de",
+        //     icon: "fab fa-instagram", // Placeholder; may need a different icon
+        //     label: 'thread'
+        // },
+        
         // Feel free to remove any of these that you don't have. I'll write an FAQ on how to add new ones later, let me know if you have a request for an icon!
         // Just change the links so that they lead to your social profiles.
 
