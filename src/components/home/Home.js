@@ -19,7 +19,7 @@ export default function Home({ innerRef }) {
                borderRadius={'20px'} p={'0.75rem'} />
             <Box marginTop={{ xs: '1rem', md: '2rem' }}
                marginLeft={{ xs: '0.5rem', md: '1rem' }} display={'flex'} gap={'.75rem'}
-               flexDirection={{ xs: 'row', md: 'column' }}  // Horizontal on small screens, vertical on large screens
+               flexDirection={{ xs: 'row', md: 'column' }}  
                justifyContent={'center'} fontSize={{ xs: '2rem', md: '2.5rem' }}>
                {info.socials.map((social, index) => (
                   <SocialIcon key={index} link={social.link} icon={social.icon} label={social.label} />
