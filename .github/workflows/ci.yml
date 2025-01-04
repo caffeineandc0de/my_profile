@@ -21,11 +21,8 @@ jobs:
         with:
           node-version: '16'  # This can still be used if you need Node.js for testing or deployment, otherwise remove
 
-      - name: Install dependencies
-        run: npm install  # Only necessary if you have some dependencies
-
       - name: Run tests
-        run: npm test -- --coverage  # If you have JavaScript tests, else remove this step
+        run: npm test -- --coverage  # Remove if you don't have any JavaScript tests
 
       - name: Build project
         run: echo "No build step needed"  # This step is just a placeholder since no build is needed for plain HTML/JS
