@@ -16,10 +16,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'  # This can still be used if you need Node.js for testing or deployment, otherwise remove
-
       - name: Build project
         run: echo "No build step needed"  # This step is just a placeholder since no build is needed for plain HTML/JS
