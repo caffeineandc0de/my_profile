@@ -4470,4 +4470,16 @@ body {
     z-index: 9998; /* Make sure the shadow is behind the cursor */
     transition: transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out; /* Smooth transition for position */
   }
+  /* Hide the cursor on mobile and tablets */
+@media (max-width: 1024px) {
+    .cursor {
+      display: none; /* Hide cursor effect on devices with width 1024px or below */
+    }
+  }
   
+  /* Alternatively, you can hide the cursor for devices without mouse support */
+  @media (pointer: coarse) {
+    .cursor {
+      display: none; /* Hide cursor effect for devices with touch input */
+    }
+  }
