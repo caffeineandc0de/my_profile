@@ -47,7 +47,7 @@ export const info = {
         },
         {
             emoji: "👨‍💻",
-            text: "Leading frontend teams to success @ Metafic"
+            text: "Leading frontend teams to success @ Publicis Sapient"
         },
         {
             emoji: "📬",
@@ -90,7 +90,7 @@ export const info = {
         // Just change the links so that they lead to your social profiles.
 
     ],
-    bio: "Hello! I'm Santos. I'm team lead at Metafic. I studied MCA at VSSUT,Burla, I enjoy long drive on the bike, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
+    bio: "Hello! I'm Santos. I'm senior experience engineer at Publicis Sapient. I studied MCA at VSSUT,Burla, I enjoy long drive on the bike, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
     skills:
     {
         proficientWith: ['javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'figma'],
