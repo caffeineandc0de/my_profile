@@ -3,7 +3,7 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      -  feature/newsite  # You can change 'main' to your desired branch, e.g., 'dev'
+      - feature/newsite  # You can change 'feature/newsite' to your desired branch
 
 jobs:
   deploy:
@@ -13,13 +13,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Install dependencies (optional)
-      run: |
-        npm install  # Only needed if you have Node.js dependencies, like for testing
+    - name: Install Netlify CLI
+      run: npm install -g netlify-cli  # Install Netlify CLI
 
     - name: Deploy to Netlify
       run: |
-        npm install -g netlify-cli  # Install Netlify CLI
         netlify deploy --dir=./ --prod  # Deploy the files directly from the root directory
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
