@@ -4444,42 +4444,68 @@ td:last-child {
 
 /* Hide the default cursor */
 body {
-    cursor: none; /* Hides the default cursor */
-  }
-  
-  /* Style for the custom filled cursor */
-  .cursor {
-    position: fixed; /* Fixed position relative to the viewport */
-    width: 20px; /* Size of the cursor */
+    cursor: none;
+    /* Hides the default cursor */
+}
+
+/* Style for the custom filled cursor */
+.cursor {
+    position: fixed;
+    /* Fixed position relative to the viewport */
+    width: 20px;
+    /* Size of the cursor */
     height: 20px;
-    background-color: rgba(33, 141, 141, 0.8); /* Filled color */
-    border-radius: 50%; /* Round shape */
-    pointer-events: none; /* Ensure it doesn't interfere with page elements */
-    z-index: 9999; /* Ensure it stays on top */
-  }
-  
-  /* Style for the custom shadow */
-  .cursor-shadow {
-    position: fixed; /* Fixed position relative to the viewport */
-    width: 40px; /* Size of the shadow circle */
+    background-color: rgba(33, 141, 141, 0.8);
+    /* Filled color */
+    border-radius: 50%;
+    /* Round shape */
+    pointer-events: none;
+    /* Ensure it doesn't interfere with page elements */
+    z-index: 9999;
+    /* Ensure it stays on top */
+}
+
+/* Style for the custom shadow */
+.cursor-shadow {
+    position: fixed;
+    /* Fixed position relative to the viewport */
+    width: 40px;
+    /* Size of the shadow circle */
     height: 40px;
-    background-color: transparent; /* Transparent center */
-    border: 3px solid rgba(33, 141, 141, 0.8); /* Border of the shadow */
-    border-radius: 50%; /* Round shape */
-    pointer-events: none; /* Ensure it doesn't interfere with page elements */
-    z-index: 9998; /* Make sure the shadow is behind the cursor */
-    transition: transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out; /* Smooth transition for position */
-  }
-  /* Hide the cursor on mobile and tablets */
+    background-color: transparent;
+    /* Transparent center */
+    border: 3px solid rgba(33, 141, 141, 0.8);
+    /* Border of the shadow */
+    border-radius: 50%;
+    /* Round shape */
+    pointer-events: none;
+    /* Ensure it doesn't interfere with page elements */
+    z-index: 9998;
+    /* Make sure the shadow is behind the cursor */
+    transition: transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out;
+    /* Smooth transition for position */
+}
+
+/* Hide the cursor on mobile and tablets */
 @media (max-width: 1024px) {
     .cursor {
-      display: none; /* Hide cursor effect on devices with width 1024px or below */
+        display: none;
+        /* Hide cursor effect on devices with width 1024px or below */
     }
-  }
-  
-  /* Alternatively, you can hide the cursor for devices without mouse support */
-  @media (pointer: coarse) {
+
+    .cursor-shadow {
+        border: none
+    }
+}
+
+/* Alternatively, you can hide the cursor for devices without mouse support */
+@media (pointer: coarse) {
     .cursor {
-      display: none; /* Hide cursor effect for devices with touch input */
+        display: none;
+        /* Hide cursor effect for devices with touch input */
     }
-  }
+
+    .cursor-shadow {
+        border: none
+    }
+}
