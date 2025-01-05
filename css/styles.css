@@ -4509,3 +4509,18 @@ body {
         border: none
     }
 }
+.entry__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; /* Adjust as needed */
+    height: 300px; /* Increase the size for a larger image */
+}
+
+.entry__thumb img {
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the container evenly */
+    object-position: center; /* Center the image within the container */
+}
