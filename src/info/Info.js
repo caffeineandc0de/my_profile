@@ -56,17 +56,17 @@ export const info = {
     ],
     socials: [
         {
-            link: "https://www.facebook.com/caffeineandc0de/",
+            link: "https://www.facebook.com/thefitandnerd/",
             icon: 'fa fa-facebook',
             label: 'facebook'
         },
         {
-            link: "https://www.instagram.com/caffeineandc0de/",
+            link: "https://www.instagram.com/thefitandnerd/",
             icon: 'fa fa-instagram',
             label: 'instagram'
         },
         {
-            link: "https://github.com/Santoshd561",
+            link: "https://github.com/caffeineandc0de",
             icon: "fa fa-github",
             label: 'github'
         },
